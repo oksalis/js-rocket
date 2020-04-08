@@ -1,0 +1,164 @@
+:root {
+  --spaceblue: #0d354e;
+  --vanilla: #ece8dd;
+}
+
+body {
+  height: 100%;
+  min-height: 100vh;
+}
+
+.btn-launch {
+  position: absolute;
+  padding: 30px;
+  background-color: var(--vanilla);
+  color: var(--spaceblue) !important;
+  font-family: "Alba", sans-serif;
+  font-size: 50px;
+  transition: 0.3s ease all;
+  left: 50%;
+}
+
+.btn-launch:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 10px 10px var(--spaceblue);
+}
+
+.left {
+  position: fixed;
+  background: var(--spaceblue) !important;
+  width: 50%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.left-top {
+    position: fixed;
+    background: var(--spaceblue) !important;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    top: 0;
+  }
+
+  .left-bottom {
+    position: fixed;
+    background: var(--vanilla) !important;
+    width: 50%;
+    height: 50%;
+    left: 0;
+    bottom: 0;
+  }
+
+.right {
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: var(--vanilla) !important;
+  background: url("img/bgg.png") fixed bottom repeat-x;
+}
+
+.right-top {
+    position: fixed;
+    background: var(--vanilla) !important;
+    width: 50%;
+    height: 50%;
+    right: 0;
+    top: 0;
+  }
+
+.rocket {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 230px;
+  height: 377px;
+  background-image: url("img/raketa.png");
+  transition: 5s bottom;
+}
+
+.nervous {
+  position: absolute;
+  bottom: 270px;
+  left: 45%;
+  background: url("../img/nervous.png") no-repeat 0 0;
+  width: 223px;
+  height: 100px;
+  margin-left: -180px;
+  display: none;
+}
+.nervous.show {
+  display: block;
+}
+
+.cant-wait {
+  position: absolute;
+  bottom: 370px;
+  left: 70%;
+  background: url("../img/cant-wait.png") no-repeat 0 0;
+  width: 206px;
+  height: 65px;
+  display: none;
+}
+.cant-wait.show {
+  display: block;
+}
+
+body.body-state1 .rocket {
+  transition: none;
+}
+body.body-state3 .rocket,
+body.body-state4 .rocket {
+  bottom: 1000px;
+}
+
+.ground {
+  border-top: 3px solid dimgray;
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 20px;
+}
+
+h1.rockett {
+    transform: translateY(-50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  font-family: "Alba", sans-serif;
+  color: var(--vanilla);
+  font-size: 50px;
+  text-align: center;
+}
+
+.state1,
+.state2,
+.state3,
+.state4,
+.state5 {
+  display: none;
+}
+
+body.body-state1 .state1 {
+  display: block;
+}
+
+body.body-state2 .state2 {
+  display: block;
+}
+
+body.body-state3 .state3 {
+  display: block;
+}
+
+body.body-state4 .state4 {
+  display: block;
+}
+
+body.body-state5 .state5 {
+  display: block;
+}
