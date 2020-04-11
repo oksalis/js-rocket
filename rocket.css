@@ -113,7 +113,12 @@ body {
 .cant-wait.show {
   display: block;
 }
-
+body.body-state5 .rocket{
+	background-image: url('../img/boom.png');
+	width: 209px;
+	height: 200px;
+	margin-left: -104.5px;
+}
 body.body-state1 .rocket {
   transition: none;
 }
